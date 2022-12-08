@@ -12,10 +12,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App w-screen">
 
       {/* Nav bar */}
-      <div className="navbar text-content">
+      <div className="navbar max-w-full text-content sticky top-0 bg-base-100 z-50">
         <div className="flex-1">
           <a href='./' className="btn btn-ghost normal-case text-xl">Bartender</a>
         </div>
@@ -35,13 +35,13 @@ function App() {
       </div>
       
       {/* Hero intro section */}
-      <div className="hero min-h-screen pb-8 bg-base-200">
+      <div className="hero h-screen pb-8 bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={pikachu3} className="max-w-sm rounded-lg shadow-2xl" alt="Pikachu drinking from a cup" />
+          <img src={pikachu3} className="h-60 md:h-96 flex-initial rounded-lg shadow-2xl" alt="Pikachu drinking from a cup" />
           <div className="container max-w-2xl">
             <h1 className="text-5xl font-bold">Bartender</h1>
             <p className="py-6 text-xl">A drinks and cocktails database where you can find ingredients and instructions to craft drinks.</p>
-            <button className="btn btn-primary" onClick={handleGetStartedClick}>Get Started</button>
+            <button className="btn btn-outline" onClick={handleGetStartedClick}>Get Started</button>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import React from "react";
 export default function SearchBar({ data, setData }) {
     return (
       // Form with text input search bar, onChange handler on the text input to update the rendered drink list
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <div className="container w-full py-8">
           <label className="flex justify-center label">
             <span className="label-text text-2xl">Enter a cocktail name or specific ingredients.</span>
