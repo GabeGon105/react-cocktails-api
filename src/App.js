@@ -15,7 +15,7 @@ function App() {
     <div className="App w-screen">
 
       {/* Nav bar */}
-      <div className="navbar max-w-full text-content sticky top-0 bg-base-100 z-50">
+      <nav className="navbar max-w-full text-content sticky top-0 bg-base-100 z-50">
         <div className="flex-1">
           <a href='./' className="btn btn-ghost normal-case text-xl">Bartender</a>
         </div>
@@ -32,10 +32,10 @@ function App() {
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
       
       {/* Hero intro section */}
-      <div className="hero h-screen pb-8 bg-base-200">
+      <header className="hero h-screen pb-8 bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img src={pikachu3} className="h-60 md:h-96 flex-initial rounded-lg shadow-2xl" alt="Pikachu drinking from a cup" />
           <div className="container max-w-2xl">
@@ -44,12 +44,12 @@ function App() {
             <button className="btn btn-outline" onClick={handleGetStartedClick}>Get Started</button>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Filterable drink list */}
-      <div className='py-8' ref={ref}>
+      <section className='py-8' ref={ref}>
       <FilterableDrinkList/>
-      </div>
+      </section>
 
       {/* Footer */}
       <footer className="footer p-10 bg-neutral text-neutral-content">
