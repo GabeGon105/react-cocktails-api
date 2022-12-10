@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SearchBar({ data, setData }) {
+export default function SearchBar({ data, setData, paginationIsActive, setPaginationIsActive }) {
     return (
       // Form with text input search bar, onChange handler on the text input to update the rendered drink list
       <form onSubmit={(e) => e.preventDefault()}>
@@ -12,6 +12,7 @@ export default function SearchBar({ data, setData }) {
             value={data.searchName}
             placeholder="Mojito"
             className="input input-bordered w-full max-w-xs text-xl"
+            onClick={ () => setPaginationIsActive(paginationIsActive => paginationIsActive + 1) }
             onChange={(e) => setData({ ...data, searchLetter: '', searchName: e.target.value })} />
         </div>
       </form>

@@ -1,15 +1,24 @@
 import FilterableDrinkList from './components/FilterableDrinkList';
 import pikachu3 from './pika_drinking3.png';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './App.css';
 // import useFetchByName from './hooks/useFetchByName';
 
 function App() {
   const ref = useRef(null);
+  const [ showScrollUp, setShowScrollUp ] = useState( false );
 
-  const handleGetStartedClick = () => {
+  const handleScrollToSearchClick = () => {
     ref.current?.scrollIntoView({behavior: 'smooth', alignToTop: true});
   };
+
+  const handleVisibleButton = () => {
+        setShowScrollUp( window.pageYOffset > 1000 )
+  }
+
+  useEffect( () => {
+        window.addEventListener( 'scroll', handleVisibleButton )
+  }, [] )
 
   return (
     <div className="App w-screen">
@@ -41,14 +50,21 @@ function App() {
           <div className="container max-w-2xl">
             <h1 className="text-5xl font-bold">Bartender</h1>
             <p className="py-6 text-xl">A drinks and cocktails database where you can find ingredients and instructions to craft drinks.</p>
-            <button className="btn btn-outline" onClick={handleGetStartedClick}>Get Started</button>
+            <button className="btn btn-outline" onClick={handleScrollToSearchClick}>Get Started</button>
           </div>
         </div>
       </header>
 
       {/* Filterable drink list */}
       <section className='py-8' ref={ref}>
-      <FilterableDrinkList/>
+        <FilterableDrinkList/>
+
+        {/* Scroll to top of drink list button */}
+        <div className={`w-10 sticky bottom-12 left-1/2  ${showScrollUp ? '' : 'hidden'}`} >
+          <button className="btn btn-circle bg-base-300" onClick={ handleScrollToSearchClick }>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16"> <path fillRule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/> </svg>
+          </button>
+        </div>
       </section>
 
       {/* Footer */}
