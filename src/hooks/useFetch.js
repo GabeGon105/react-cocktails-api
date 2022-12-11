@@ -14,7 +14,7 @@ const useFetch = () => {
       const timeoutId = setTimeout(() => {
         const fetch = async () => {
           try {
-            const res = await axios.get(`https:/www.thecocktaildb.com/api/json/v1/1/search.php?f=${data.searchLetter}`);
+            const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${data.searchLetter}`);
             setData({ ...data, apiResults: res.data.drinks });
           } catch (err) {
             console.error(err);
@@ -32,7 +32,7 @@ const useFetch = () => {
       const timeoutId = setTimeout(() => {
         const fetch = async () => {
           try {
-            const res = await axios.get(`https:/www.thecocktaildb.com/api/json/v1/1/search.php?s=${data.searchName}`);
+            const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${data.searchName}`);
             setData({ ...data, apiResults: res.data.drinks });
           } catch (err) {
             console.error(err);
