@@ -3,17 +3,17 @@ A single-page React web app where users can search a drinks and cocktails databa
 
 **Link to Bartender:** https://bartender-pika.netlify.app/
 
-[![A video demo showing how users can use the web app Bartender](./bartender-demo.gif)]
+![A video demo showing how users can use the web app Bartender](./bartender-demo.gif)
 
 ## How It's Made:
 
 **Tech used:** <p align="left">
-[![react logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=react&animation=spin&svgfill=15d8fe)]
-[![javascript logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=javascript&svgfill=f6df1c)]
-[![tailwindcss logo](https://readme-components.vercel.app/api?component=logo&logo=tailwindcss)]
-[![node.js logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=node.js&svgfill=659b60)]
-[![css3 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=CSS3&svgfill=028dd1)]
-[![html5 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=html5&svgfill=f06629)]
+![react logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=react&animation=spin&svgfill=15d8fe)
+![javascript logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=javascript&svgfill=f6df1c)
+![tailwindcss logo](https://readme-components.vercel.app/api?component=logo&logo=tailwindcss)
+![node.js logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=node.js&svgfill=659b60)
+![css3 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=CSS3&svgfill=028dd1)
+![html5 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=html5&svgfill=f06629)
 </p>
 
 This cocktailsDB api is quite popular, but I noticed that most implementations move in this same flow: user text input, user submit, api call is fired, data is received, page is reloaded with the data. However, I wanted to create something a bit more fluid and user-friendly.
