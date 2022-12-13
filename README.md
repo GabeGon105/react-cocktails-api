@@ -10,7 +10,7 @@ A single-page React web app where users can search a drinks and cocktails databa
 **Tech used:** <p align="left">
 ![react logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=react&animation=spin&svgfill=15d8fe)
 ![javascript logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=javascript&svgfill=f6df1c)
-![tailwindcss logo](https://readme-components.vercel.app/api?component=logo&logo=tailwindcss)
+![tailwindcss logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=tailwindcss)
 ![node.js logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=node.js&svgfill=659b60)
 ![css3 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=CSS3&svgfill=028dd1)
 ![html5 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=html5&svgfill=f06629)
