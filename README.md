@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Bartender
+A single-page React web app where users can search a drinks and cocktails database for ingredients and instructions to craft drinks.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Link to Bartender:** https://bartender-pika.netlify.app/
 
-## Available Scripts
+[![A video demo showing how users can use the web app Bartender](./bartender-demo.gif)]
 
-In the project directory, you can run:
+## How It's Made:
 
-### `npm start`
+**Tech used:** <p align="left">
+[![react logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=react&animation=spin&svgfill=15d8fe)]
+[![javascript logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=javascript&svgfill=f6df1c)]
+[![tailwindcss logo](https://readme-components.vercel.app/api?component=logo&logo=tailwindcss)]
+[![node.js logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=node.js&svgfill=659b60)]
+[![css3 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=CSS3&svgfill=028dd1)]
+[![html5 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=html5&svgfill=f06629)]
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This cocktailsDB api is quite popular, but I noticed that most implementations move in this same flow: user text input, user submit, api call is fired, data is received, page is reloaded with the data. However, I wanted to create something a bit more fluid and user-friendly.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I wanted to make this web app work with zero page reloads using React, and I decided to also add a “search by letter” functionality using a button group so the user can find new drinks more easily. Instead of having the user manually submit their text input, I set up a 1 second timer between the last user input and the api call. This way it's more user friendly while still not firing a bunch of api calls.
 
-### `npm test`
+As for Pikachu, well... my girlfriend and I are rewatching the original Indigo League series and I just really like Pikachu :)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Optimizations
 
-### `npm run build`
+Initially, I had the fetch request set up to fetch data every single time the user input box changed. I quickly realized that this meant a request was made for every single letter typed out. If a user typed out "strawberry mojito" for example, that resulted in 17 fetch requests! And that’s assuming they typed perfectly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To fix this, I set up a timer to wait 1 second after the most recent change in the user text input field before firing the fetch request. In doing this, I still held on to the user-friendliness and fluidity I wanted without piling on endless unnecessary fetch requests.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Lessons Learned:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Way back at the beginning of my programming journey, I utilized solely HTML and CSS. Before I knew anything about tools like Bootstrap or MaterialUI, I created my styles from scratch using CSS. Fast forward to more recently and, admittedly, it had been quite a while since I wrote CSS from scratch.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For this project, I made use of Tailwind CSS. While this tool does make styling far quicker and more intuitive, it is no replacement for actual CSS knowledge. I believe the biggest lesson I learned from this project is that these styling tools and libraries are incredibly useful, however, a solid foundational knowledge of how CSS works and real experience using CSS is irreplaceable.
