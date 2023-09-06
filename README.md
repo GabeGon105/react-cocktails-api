@@ -1,5 +1,6 @@
 # Bartender
-A single-page React web app where users can search a drinks and cocktails database for ingredients and instructions to craft drinks.
+
+Client project - A single-page React web app where users can search an English drinks and cocktails database for ingredients and instructions to craft drinks. Used in Hongdae, South Korea
 
 **Link to Bartender:** https://bartender-pika.netlify.app/
 
@@ -14,13 +15,16 @@ A single-page React web app where users can search a drinks and cocktails databa
 ![node.js logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=node.js&svgfill=659b60)
 ![css3 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=CSS3&svgfill=028dd1)
 ![html5 logo](https://readme-components.vercel.app/api?component=logo&fill=black&logo=html5&svgfill=f06629)
+
 </p>
 
-This cocktailsDB api is quite popular, but I noticed that most implementations move in this same flow: user text input, user submit, api call is fired, data is received, page is reloaded with the data. However, I wanted to create something a bit more fluid and user-friendly.
+While living in Seoul, South Korea I often went to meetups and events with foreigners to meet new people and make new connections. A common issue for Korean bartenders at these types of events is that they don’t know the English name for many cocktails, so they’re left to rely on the (drunken) instructions from their customers. As you can imagine, this does not always end well! A bartender at one of these famous meetup spots requested I build an app for him that could fix this issue and allow him to better serve his customers.
+
+This cocktailsDB api is quite popular, but I noticed that most implementations move in this same flow: user text input, user submit, api call is fired, data is received, page is reloaded with the data. However, I wanted to create something a bit more fluid and user-friendly for the fast-paced bartender workflow.
 
 I wanted to make this web app work with zero page reloads using React, and I decided to also add a “search by letter” functionality using a button group so the user can find new drinks more easily. Instead of having the user manually submit their text input, I set up a 1 second timer between the last user input and the api call. This way it's more user friendly while still not firing a bunch of api calls.
 
-As for Pikachu, well... my girlfriend and I are rewatching the original Indigo League series and I just really like Pikachu :)
+As for Pikachu, well… this client is a huge fan of pokemon and my girlfriend and I are currently rewatching the original Indigo League series. :)
 
 ## Optimizations
 
